@@ -395,3 +395,22 @@ nav {
 .articles-container span {
 	color: gray;
 }
+
+footer {
+	width: 100%;
+}
+
+.footer-top {
+	width: 100%;
+	text-align: center;
+	background-color: maroon;
+}
+
+.footer-top ul li {
+	display: inline;
+	
+}
+
+.footer-bottom {
+	width: 100%;
+}
