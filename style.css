@@ -54,6 +54,11 @@ header {
 	z-index: 998;
 }
 
+main {
+	background: url("./assets/backg.jfif") no-repeat;
+	background-size: cover;
+}
+
 nav {
 	display: flex;
 	flex-flow: column wrap;
@@ -324,6 +329,7 @@ nav {
 	justify-content: space-between;
 	font-family: 'Press Start 2P', cursive;
 	color: red;
+	margin-bottom: 15px;
 }
 
 .articles-header img {
@@ -342,6 +348,15 @@ nav {
 	color: red;
 }
 
+.articles-header p {
+	align-self: center;
+    height: 4px;
+}
+
+.fa-angle-double-right {
+	font-size: 20px;
+}
+
 .articles-header p a:hover {
 	text-decoration: underline;
 	color: gray;
@@ -351,4 +366,32 @@ nav {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
+	width: 100%;
+}
+
+.articles-container div {
+	width: 24%;
+	margin-bottom: 15px;;
+}
+
+.articles-container img {
+	width: 240px;
+	height: 150px;
+}
+
+.articles-container p a {
+	color: red;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.5;
+	text-decoration: none;
+}
+
+.articles-container p a:hover {
+	color: gray;
+	text-decoration: underline;
+}
+
+.articles-container span {
+	color: gray;
 }
