@@ -46,3 +46,113 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+header {
+	position: sticky;
+	width: 100%;
+	top: 0;
+	z-index: 998;
+}
+
+nav {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.top-navbar {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+	height: 50px;
+	background-color: black;
+}
+
+.top-navbar img {
+	height: 50px;
+	width: 150px;
+	cursor: pointer;
+}
+
+.top-navbar ul {
+	padding-right: 25px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.top-navbar ul li {
+	display: inline;
+}
+
+.top-navbar a {
+	padding-left: 10px;
+	padding-right: 10px;
+	border-left: 1px solid red;
+	text-decoration: none;
+	color: red;
+	font-size: 16px;
+	font-weight: 700;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.top-navbar a:hover {
+	color: white;
+}
+
+.fa-bookmark {
+	font-size: 20px;
+}
+
+.bottom-navbar {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+	height: 50px;
+	background-color: gray;
+	align-items: center;
+}
+
+.bottom-navbar ul {
+	padding-left: 25px;
+}
+
+.bottom-navbar ul li {
+	display: inline;
+}
+
+.bottom-navbar a {
+	text-decoration: none;
+	padding: 0 10px;
+	color: black;
+	font-size: 16px;
+	font-weight: 700;
+	font-family: 'Orbitron', sans-serif;
+}
+
+.bottom-navbar a:hover {
+	color: white;
+}
+
+.bottom-navbar form {
+	padding-right: 15px;
+	width: 300px;
+}
+.bottom-navbar button {
+	cursor: pointer;
+	background-color: lightgray;
+	border: 2px solid black;
+	border-left: 1px solid black;
+	height: 26px;
+	width: 35px;
+}
+
+.bottom-navbar input {
+	border: 2px solid black;
+	border-right: 1px solid black;
+	background-color: lightgray;
+	width: 80%;
+	height: 20px;
+}
+
+
