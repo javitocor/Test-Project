@@ -158,14 +158,15 @@ nav {
 }
 
 .bottom-navbar input {
-	border: 2px solid black;
-	border-right: 1px solid black;
-	background-color: lightgray;
-	color: black;
-	width: 100%;
-	height: 20px;
-	outline: 0;
-	box-shadow: 5px 7px rgb(128, 122, 122);
+	border: 2px solid black !important;
+	border-right: 1px solid black !important;
+	background-color: lightgray !important;
+	color: black !important;
+	width: 100% !important;
+	height: 20px !important;
+	outline: 0 !important;
+	box-sizing: unset !important;
+	box-shadow: 5px 7px rgb(128, 122, 122) !important;
 }
 
 
@@ -327,6 +328,7 @@ nav {
 .main-four h2 {
 	font-size: 15px;
 	line-height: 2;
+	padding-bottom: 25px;
 }
 
 .main-one h4,
@@ -363,7 +365,6 @@ nav {
 	font-family: 'Press Start 2P', cursive;
 	color: red;
 	margin-bottom: 15px;
-	/* margin-right: 15px; */
 }
 
 .articles-header img {
@@ -430,6 +431,68 @@ nav {
 	color: gray;
 }
 
+.submission-form {
+	width:75%;
+	margin: 0 auto;
+	border: 3px solid black;
+	font-family: 'Press Start 2P', cursive;
+}
+
+.submission-form h2 {
+	width: 100%;
+	text-align: center;
+	background-color: black;
+	color: red;
+	font-size: 30px;
+	font-weight: 700;
+	padding: 15px 0;
+}
+
+.form-container {
+	display: block;
+	background-color: black;
+	color: red;
+	position: relative;
+}
+.form-container form fieldset legend {
+	font-size: 20px;
+	line-height: 1.5;
+	text-align: center;
+	padding: 15px 10px;
+}
+
+.form-top {
+	width: 90%;
+	margin: 0px auto 10px auto;
+}
+
+.form-top label {
+	/* padding: 10px 0; */
+	/* line-height: 31px; */
+	/* margin: 0px 0; */
+}
+
+select,
+input[type=url],
+input[type=tel],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=text] {
+	width: 100%;
+	box-sizing: border-box;
+	border: 2px solid red;
+	border-radius: 4%;
+	outline: none;
+	background-color: lightgray;
+	padding: 12px 20px;
+	margin: 7px 0;
+	transition:;
+	position: relative;
+}
+
+
+
 footer {
 	width: 100%;
 	height: 150px;
@@ -493,10 +556,11 @@ footer {
 
 .footer-bottom a {
 	text-decoration: none;
-	color: black;
+	color: red;
 }
 
 .footer-bottom a:hover {
-	color: red;
+	color: gray;
 }
+
 
