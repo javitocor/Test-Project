@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	width: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -154,7 +155,6 @@ nav {
 	border-left: 1px solid black;
 	height: 26px;
 	width: 35px;
-	box-shadow: 5px 7px rgb(128, 122, 122);
 }
 
 .bottom-navbar input {
@@ -163,10 +163,11 @@ nav {
 	background-color: lightgray !important;
 	color: black !important;
 	width: 100% !important;
-	height: 20px !important;
+	height: 22px !important;
+	margin: 0 !important;
+	padding: 0 !important;
 	outline: 0 !important;
 	box-sizing: unset !important;
-	box-shadow: 5px 7px rgb(128, 122, 122) !important;
 }
 
 
@@ -466,14 +467,16 @@ nav {
 	margin: 0px auto 10px auto;
 }
 
-.form-top label {
-	/* padding: 10px 0; */
-	/* line-height: 31px; */
-	/* margin: 0px 0; */
+input[type=date] {
+	width: 39%;
+	background-color: lightgray;
+	outline: none;
+	border: 2px solid red;
+	color: black;
+	font-size: 17px;
 }
 
 select,
-input[type=url],
 input[type=tel],
 input[type=email],
 input[type=number],
@@ -482,16 +485,205 @@ input[type=text] {
 	width: 100%;
 	box-sizing: border-box;
 	border: 2px solid red;
-	border-radius: 4%;
+	border-radius: 2%;
+	color: black;
 	outline: none;
 	background-color: lightgray;
 	padding: 12px 20px;
 	margin: 7px 0;
-	transition:;
-	position: relative;
+	font-size: 17px;
 }
 
+.radio {
+	margin: 21px 0;
+}
 
+.radio input[type="radio"] {
+	opacity: 0;
+  	position: fixed;
+  	width: 0;
+}
+
+.radio label {
+	display: inline;
+	background-color: black;
+	padding: 10px 20px;
+	border: 2px solid red;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.radio label:hover {
+	background-color: lightgray;
+}
+
+.radio input[type="radio"]:focus + label {
+	border: 2px dashed red;
+}
+
+.radio input[type="radio"]:checked + label {
+	background-color: lightgray;
+	border: 2px dashed red; 
+}
+
+hr {
+	border: 1px dashed red;
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+	outline: none;
+	opacity: 0.8;
+	width: 250px;
+}
+
+input[type=range]:hover {
+	opacity: 1;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	background: lightgray;
+	border: 1px solid red;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 20px;
+	height: 22px;
+	border-radius: 50%;
+	background: red;
+	border: 1px solid black;
+	margin-top: -10px;
+	box-shadow: 0.8px -0.8px 1.7px 1.5px rgba(219, 19, 19, 0.5);
+}
+
+input[type=url] {
+	width: 165px;
+	transition: width 3s;
+	background: lightgray;
+	outline: none;
+	border: 1px solid red;
+	height: 20px;
+	padding: 3px 10px;
+}
+
+input[type=url]:focus {
+	width: 300px;
+}
+
+input[type=file] {
+	height: 0.1px;
+	width: 0.1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	position: absolute;
+	color: black;
+}
+
+.file {
+	padding: 6px 10px;
+	border: 1px solid red;
+	cursor: pointer;
+	width: 100px;
+	display: inline;
+	position: relative;
+	left: 250px;
+}
+
+.file:hover {
+	background-color: lightgray;
+}
+
+input[list] {
+	outline: none;
+	border: 1px solid red;
+}
+
+input[type=checkbox] {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	opacity: 0;
+	cursor: pointer;
+	margin-left: 20px;
+	z-index: 998;
+}
+
+.checkbox {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	margin-bottom: 8px;
+}
+
+.checkbox span {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background-color: black;
+	border: 1px solid red;
+	margin-left: 15px;
+}
+
+.checkbox span:hover {
+	background-color: lightgray;
+}
+
+.checkbox input:checked ~ span {
+	background-color: gray;
+}
+
+.checkbox span:after {
+	content: "";
+  	position: absolute;
+  	display: none;
+}
+
+.checkbox input:checked ~ span:after {
+	display: block;
+}
+
+.checkbox span:after {
+	width: 3px;
+	height: 5px;
+	border: solid red;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	left: 2.8px;
+	top: 1.5px;
+}
+
+textarea {
+	outline: none;
+	border: 1px solid red;
+	resize: none;
+	width:50%;
+	position: relative;
+	left: 200px;
+	margin-top: 8px;
+}
+
+input[type=submit] {
+	background-color: black;
+	border: 1px solid red;
+	border-radius: 4px;
+	color: red;
+	padding: 8px 12px;
+	cursor: pointer;
+	position:  relative;
+	margin: 8px 0px 10px 46%;
+}
+
+input[type=submit]:hover {
+	background-color: lightgray;
+	border: 2.5px solid red;
+}
 
 footer {
 	width: 100%;

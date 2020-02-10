@@ -132,14 +132,12 @@
               <input type="text" id="fname" name="firstname" maxlength="25" placeholder="Your Name.." required>
               <label for="lname"><i class="fas fa-user-alt"></i> Last Name</label>
               <input type="text" id="lname" name="lastname" maxlength="25" placeholder="Your Last Name.." required>
-              <label for="password"><i class="fas fa-unlock-alt"></i> Password</label>
-              <input type="password" name="pwd" id="pwd" min="8" max="12" maxlength="12" required>
+              <label for="password"><i class="fas fa-unlock-alt"></i> Password </label>
+              <input type="password" name="pwd" id="pwd" min="8" max="12" maxlength="12" placeholder="One number, one uppercase, lowercase letter and between 8-12 characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
               <label for="email"><i class="fas fa-envelope-open-text"></i> E-Mail</label>
               <input type="email" id="mail" name="emailaddress" size="35" placeholder="E-mail" multiple required>
-              <label for="phone"><i class="fas fa-phone-alt"></i> Phone</label>
-              <input type="tel" id="phone" size="9" min="9" max="12" placeholder="Phone Number" required multiple>
-              <label for="bday"><i class="fas fa-birthday-cake"></i> Birthday</label>
-              <input type="date" name="bday" id="bday" required>
+              <label for="phone"><i class="fas fa-phone-alt"></i> Phone (Add your country code)</label>
+              <input type="tel" id="phone" size="13" maxlength="13" placeholder="+88 888888888" pattern="^\+(?:[0-9]●?){6,14}[0-9]$" required multiple>
               <label for="country"><i class="fas fa-globe-asia"></i> Country</label>
               <select name="country" id="country">
                 <option value="Catalonia">Catalonia</option>
@@ -147,26 +145,32 @@
                 <option value="Thailand">Thailand</option>
                 <option value="Saudi Arabia">Saudi Arabia</option>
               </select>
-              <label for="male"><i class="fas fa-mars"></i> Male</label>
-              <input type="radio" name="gender" id="male" value="male">
-              <label for="female"><i class="fas fa-venus"></i> Female</label>
-              <input type="radio" name="gender" id="female" value="female">
-              <label for="other"><i class="fas fa-transgender-alt"></i> Other</label>
-              <input type="radio" name="gender" id="other" value="other">
+              <label for="bday"><i class="fas fa-birthday-cake"></i> Birthday</label>
+              <input type="date" name="bday" id="bday" min="1910-01-01" max="2050-01-01" required>
+              <fieldset class="radio">     
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male"><i class="fas fa-mars"></i> Male</label>                
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female"><i class="fas fa-venus"></i> Female</label>
+                <input type="radio" name="gender" id="other" value="other">
+                <label for="other"><i class="fas fa-transgender-alt"></i> Other</label>
+              </fieldset>   
             </fieldset>
+            <hr>
             <fieldset class="form-bottom">
               <legend><i class="fas fa-star-half-alt"></i> Do You Like This Website?</legend>
               <label for="score">Score This Page</label>
-              <input type="range" name="score" id="score" min="0" max="10">
-              <h3>Do You Have A Website?</h3>
+              <input type="range" name="score" id="score" min="0" max="100" value="50">
+              <legend><i class="fas fa-wifi"></i> Do You Have A Website?</legend>
               <label for="homepage">Add Your Homepage</label>
               <input type="url" name="homepage" id="homepage">
               <legend><i class="fas fa-folder"></i> Do You Want Share Something With Us?</legend>
-              <label for="myfile">Select Files</label>
+              <label for="myfile" class="file"><i class="fas fa-cloud-upload-alt"></i> Select Files</label>
               <input type="file" name="myfile" id="myfile" multiple>
+              <legend><i class="fas fa-hand-peace"></i> Which is the best book?</legend>
               <label for="">Best Book</label>
               <input list="best" name="best">
-                <datalist id="best-book">
+                <datalist id="best">
                   <option value="Number 1">
                   <option value="Number 2">
                   <option value="Number 3">
@@ -174,16 +178,24 @@
                   <option value="Number 5">
                 </datalist>
               <legend><i class="fas fa-book"></i> How Many Books Do You Have?</legend>
-              <label for="all">I Have All</label>
-              <input type="checkbox" name="all" value="" checked>
-              <label for="some">I Have Some</label>
-              <input type="checkbox" name="some" value="">
-              <label for="zero">I Don't Have</label>
-              <input type="checkbox" name="zero" value="">
-              <label for="not">I Am Not Interested</label>
-              <input type="checkbox" name="not" value="">
-              <label for="comment"><i class="fas fa-comments"></i> Add Your Comment</label>
-              <textarea name="t" id="comment" cols="30" rows="10"></textarea>
+              <label for="all" class="checkbox">I Have All                
+                <input type="checkbox" name="all" value="" checked>
+                <span></span>
+              </label>
+              <label for="some" class="checkbox">I Have Some
+                <input type="checkbox" name="some" value="">
+                <span></span>
+              </label>
+              <label for="zero" class="checkbox">I Don't Have
+                <input type="checkbox" name="zero" value="">
+                <span></span>
+              </label>
+              <label for="not" class="checkbox">I Am Not Interested
+                <input type="checkbox" name="not" value="">
+                <span></span>
+              </label>
+              <label for="comment"><i class="fas fa-comments"></i> Add Your Comment</label><br>
+              <textarea placeholder="Write here your comment..."  wrap="off" name="t" id="comment" cols="30" rows="10"></textarea>
             </fieldset>
             <input type="submit" src="" value="Submit">
           </form>
